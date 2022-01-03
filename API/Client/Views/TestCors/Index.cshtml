@@ -1,0 +1,99 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        nav > ul > li {
+            background-color: aqua;
+        }
+
+        div {
+            padding: 10px;
+        }
+        .green {
+            background-color: green;
+            position: static;
+        }
+
+        .red {
+            background-color: red;
+            position: absolute;
+            top: 20%;
+            left : 30%;
+            width: 5%;
+            height:25%;
+        }
+
+        .yellow {
+            background-color: yellow;
+            position: static;
+            padding: 15px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Help</li>
+        </ul>
+    </nav>
+
+    <table>
+        <tr class="row">
+            <td class="col"></td>
+        </tr>
+    </table>
+
+    <col></col>
+
+    <a href="http://"></a>
+    <a href="mailto:"></a>
+
+    <input type="text" value="" id="" />
+    <input type="date" value="" id="" />
+
+    <form action="" method="post">
+        <div>
+            <table>
+                <tr>
+                    <td>a</td>
+                    <td>b</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                </tr>
+            </table>
+        </div>
+        <input type="button" value="Save" />
+    </form>
+
+
+    <div class="green">Green</div>
+    <div class="red">Red
+        <div class="yellow">Yellow</div>
+    </div>
+    <div class="yellow">Yellow</div>
+
+
+</body>
+</html>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+    $.ajax({
+        url: "https://localhost:44365/API/Roles",
+        success: function (result) {
+            console.log(result);
+        }
+    })
+</script>
