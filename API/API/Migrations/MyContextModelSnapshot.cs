@@ -46,18 +46,15 @@ namespace API.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("AccountNIK")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("NIK")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("RoleId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AccountNIK");
+                    b.HasIndex("NIK");
 
                     b.HasIndex("RoleId");
 
@@ -180,7 +177,7 @@ namespace API.Migrations
                 {
                     b.HasOne("API.Models.Account", "Account")
                         .WithMany("AccountRoles")
-                        .HasForeignKey("AccountNIK");
+                        .HasForeignKey("NIK");
 
                     b.HasOne("API.Models.Role", "Role")
                         .WithMany("AccountRoles")

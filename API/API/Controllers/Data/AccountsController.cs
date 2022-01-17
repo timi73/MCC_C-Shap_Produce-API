@@ -35,7 +35,7 @@ namespace API.Controllers.Data
             switch (response)
             {
                 case 0:
-                    return Ok(new { status = HttpStatusCode.OK, response, message = "Email Belum Terdaftar" });
+                    return Ok(new JWTokenVM { status = HttpStatusCode.BadRequest, Token = null, message = "Email Belum Terdaftar" });
                 case 1:
                     var getRole = accountRepository.GetRoles(loginVM.Email);
                     var claims = new List<Claim>
@@ -57,11 +57,11 @@ namespace API.Controllers.Data
                         );
                     var idToken = new JwtSecurityTokenHandler().WriteToken(token);
                     claims.Add(new Claim("TokenSecurity", idToken.ToString()));
-                    return Ok(new { status = HttpStatusCode.OK, idToken, message = "Berhasil Login" });
+                    return Ok(new JWTokenVM { status = HttpStatusCode.OK, Token = idToken, message = "Berhasil Login" });
                 case 6:
-                    return Ok(new { status = HttpStatusCode.OK, response, message = "Password Salah" });
+                    return Ok(new JWTokenVM { status =HttpStatusCode.BadRequest, Token = null, message = "Password Salah" });
                 default:
-                    return BadRequest(new { status = HttpStatusCode.BadRequest, response, message = "Login Gagal" });
+                    return BadRequest(new JWTokenVM { status = HttpStatusCode.BadRequest, Token = null, message = "Login Gagal" });
             }
         }
 

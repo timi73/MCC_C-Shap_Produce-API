@@ -21,5 +21,19 @@ namespace API.Repository.Data
             }
             return 0;
         }
+
+        public IEnumerable<Object> UniversityCount()
+        {
+            var list = from edu in myContext.Educations
+                       join uni in myContext.Universities on edu.UniversityId equals uni.Id
+                       group uni by new { edu.UniversityId, uni.Name } into Group
+                       select new
+                       {
+                           UniversityId = Group.Key.UniversityId,
+                           UniversityName = Group.Key.Name,
+                           Count = Group.Count()
+                       };
+            return list.ToList();
+        }
     }
 }

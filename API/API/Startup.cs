@@ -46,7 +46,7 @@ namespace API
                 C.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
             });
             services.AddCors(c => {
-                c.AddPolicy("AllowOrigin", option => option.AllowAnyOrigin());
+                c.AddPolicy("AllowOrigin", option => option.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
             services.AddAuthentication(auth =>
             {
@@ -88,7 +88,7 @@ namespace API
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseCors(options => options.AllowAnyOrigin());
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

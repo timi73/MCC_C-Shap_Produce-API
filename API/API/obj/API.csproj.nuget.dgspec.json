@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MCC\\API\\API\\API.csproj": {}
+    "D:\\MCC\\MCC_C-Shap_Produce-API\\API\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\MCC\\API\\API\\API.csproj": {
+    "D:\\MCC\\MCC_C-Shap_Produce-API\\API\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MCC\\API\\API\\API.csproj",
+        "projectUniqueName": "D:\\MCC\\MCC_C-Shap_Produce-API\\API\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\MCC\\API\\API\\API.csproj",
+        "projectPath": "D:\\MCC\\MCC_C-Shap_Produce-API\\API\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Timothy\\.nuget\\packages\\",
-        "outputPath": "D:\\MCC\\API\\API\\obj\\",
+        "outputPath": "D:\\MCC\\MCC_C-Shap_Produce-API\\API\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Timothy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -69,6 +69,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.11, )"
+            },
+            "Moment.js": {
+              "target": "Package",
+              "version": "[2.29.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

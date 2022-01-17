@@ -26,7 +26,7 @@ namespace API.Context
             modelBuilder.Entity<Account>().HasOne(p => p.Profiling).WithOne(a => a.Account).HasForeignKey<Profiling>(p => p.NIK);
             modelBuilder.Entity<Education>().HasMany(e => e.Profilings).WithOne(e => e.Education);
             modelBuilder.Entity<University>().HasMany(e => e.Educations).WithOne(u => u.University);
-            modelBuilder.Entity<Account>().HasMany(ar => ar.AccountRoles).WithOne(a => a.Account);
+            modelBuilder.Entity<Account>().HasMany(ar => ar.AccountRoles).WithOne(a => a.Account).HasForeignKey(p => p.NIK);
             modelBuilder.Entity<Role>().HasMany(ar => ar.AccountRoles).WithOne(r => r.Role);
         }
     }

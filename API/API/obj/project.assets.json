@@ -549,6 +549,9 @@
           }
         }
       },
+      "Moment.js/2.29.1": {
+        "type": "package"
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -3193,6 +3196,23 @@
         "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Moment.js/2.29.1": {
+      "sha512": "CSpZfBYACe5QBFtPRv7k6IS5TZmdcisKFIRdQee1ZINjKl05AlSCTaXn/bo25XUnD82L0vvdEJXH+uv3nKeaiA==",
+      "type": "package",
+      "path": "moment.js/2.29.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/moment-with-locales.js",
+        "Content/Scripts/moment-with-locales.min.js",
+        "Content/Scripts/moment-with-locales.min.js.map",
+        "Content/Scripts/moment.js",
+        "Content/Scripts/moment.min.js",
+        "Content/Scripts/moment.min.js.map",
+        "moment.js.2.29.1.nupkg.sha512",
+        "moment.js.nuspec"
       ]
     },
     "NETStandard.Library/1.6.1": {
@@ -7749,6 +7769,7 @@
       "Microsoft.EntityFrameworkCore.Proxies >= 5.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.11",
+      "Moment.js >= 2.29.1",
       "Swashbuckle.AspNetCore >= 5.0.0"
     ]
   },
@@ -7758,11 +7779,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MCC\\API\\API\\API.csproj",
+      "projectUniqueName": "D:\\MCC\\MCC_C-Shap_Produce-API\\API\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\MCC\\API\\API\\API.csproj",
+      "projectPath": "D:\\MCC\\MCC_C-Shap_Produce-API\\API\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Timothy\\.nuget\\packages\\",
-      "outputPath": "D:\\MCC\\API\\API\\obj\\",
+      "outputPath": "D:\\MCC\\MCC_C-Shap_Produce-API\\API\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Timothy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7820,6 +7841,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[5.0.11, )"
+          },
+          "Moment.js": {
+            "target": "Package",
+            "version": "[2.29.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
