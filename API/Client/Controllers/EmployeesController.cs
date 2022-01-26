@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Client.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Director")]
     public class EmployeesController : BaseController<Employee, EmployeRepository, string>
     {
         private readonly EmployeRepository employeRepository;

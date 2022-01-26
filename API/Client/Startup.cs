@@ -12,6 +12,7 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -83,6 +84,23 @@ namespace Client
                     context.Request.Headers.Add("Authorization", "Bearer " + JWToken);
                 }
                 await next();
+            });
+            app.UseStatusCodePages(async context => {
+                var request = context.HttpContext.Request;
+                var response = context.HttpContext.Response;
+
+                if (response.StatusCode.Equals((int)HttpStatusCode.Unauthorized))
+                {
+                    response.Redirect("/PageError/Unauthorized401");
+                }
+                else if (response.StatusCode.Equals((int)HttpStatusCode.NotFound))
+                {
+                    response.Redirect("/PageError/NotFound404");
+                }
+                else if (response.StatusCode.Equals((int)HttpStatusCode.Forbidden))
+                {
+                    response.Redirect("/PageError/Forbiden403");
+                }
             });
             app.UseAuthentication();
             app.UseAuthorization();

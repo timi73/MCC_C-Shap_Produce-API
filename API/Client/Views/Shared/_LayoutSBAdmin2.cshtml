@@ -51,20 +51,25 @@
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="/Exercise">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Exercise</span>
-                </a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="/Employees">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Employees</span>
-                </a>
-            </li>
+            @if (User.IsInRole("Manager") || User.IsInRole("Director"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link" href="/Exercise">
+                        <i class="fas fa-fw fa-chart-area"></i>
+                        <span>Exercise</span>
+                    </a>
+                </li>
+            }
+            @if (User.IsInRole("Director"))
+            {
+                <!-- Nav Item - Tables -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/Employees">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Employees</span>
+                    </a>
+                </li>
+            }
 
             <li class="nav-item">
                 <a class="nav-link" href="/Chart">

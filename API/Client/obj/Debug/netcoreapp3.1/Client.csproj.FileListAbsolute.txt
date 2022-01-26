@@ -293,3 +293,7 @@ D:\MCC\MCC_C-Shap_Produce-API\API\Client\bin\Debug\netcoreapp3.1\API.dll
 D:\MCC\MCC_C-Shap_Produce-API\API\Client\bin\Debug\netcoreapp3.1\API.pdb
 D:\MCC\MCC_C-Shap_Produce-API\API\Client\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
 D:\MCC\MCC_C-Shap_Produce-API\API\Client\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutLogin.cshtml.g.cs
+D:\MCC\MCC_C-Shap_Produce-API\API\Client\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutErrorPage.cshtml.g.cs
+D:\MCC\MCC_C-Shap_Produce-API\API\Client\obj\Debug\netcoreapp3.1\Razor\Views\PageError\NotFound404.cshtml.g.cs
+D:\MCC\MCC_C-Shap_Produce-API\API\Client\obj\Debug\netcoreapp3.1\Razor\Views\PageError\Unauthorized401.cshtml.g.cs
+D:\MCC\MCC_C-Shap_Produce-API\API\Client\obj\Debug\netcoreapp3.1\Razor\Views\PageError\Forbiden403.cshtml.g.cs
